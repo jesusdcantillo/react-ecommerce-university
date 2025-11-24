@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [cartCount] = useState(0);
@@ -7,9 +8,9 @@ export default function Header() {
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
-          <a className="navbar-brand fw-bold" href="/">
+          <Link className="navbar-brand fw-bold" to="/">
             🛒 TechShop
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,24 +25,24 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Inicio
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/productos">
+                <Link className="nav-link" to="/productos">
                   Productos
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/contacto">
+                <Link className="nav-link" to="/contacto">
                   Contacto
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/carrito">
+                <Link className="nav-link" to="/carrito">
                   🛒 Carrito ({cartCount})
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
